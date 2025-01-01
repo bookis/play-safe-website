@@ -5,12 +5,15 @@
 /* 2. Remove default margin */
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 body {
+  box-sizing: border-box;
   /* 3. Add accessible line-height */
   line-height: 1.5;
   /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
+  padding: 0px auto !important;
 }
 /* 5. Improve media defaults */
 img, picture, video, canvas, svg {
@@ -40,7 +43,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  padding: 20px;
   font-family: Helvetica, Arial, Sans-Serif;
 }
 
@@ -61,6 +63,12 @@ body > div {
   gap: 20px;
 }
 
+.page {
+  min-height: 100vh;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
 h4 {
   font-size: 20px;
   text-decoration: underline;
@@ -68,4 +76,20 @@ h4 {
 
 .bg a {
   color: white;
+}
+
+.logo {
+}
+
+/*homepage*/
+.home-image-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.home-image-stack img {
+  width: 300px;
 }
