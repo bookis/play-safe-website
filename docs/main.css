@@ -3,17 +3,19 @@
   box-sizing: border-box;
 }
 /* 2. Remove default margin */
-* {
+body * {
   margin: 0;
   box-sizing: border-box;
 }
 body {
+  font-family: Helvetica, Arial, Sans-Serif;
   box-sizing: border-box;
   /* 3. Add accessible line-height */
   line-height: 1.5;
   /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
-  padding: 0px auto !important;
+  padding: 0px !important;
+  margin: 0;
 }
 /* 5. Improve media defaults */
 img, picture, video, canvas, svg {
@@ -42,10 +44,6 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-body {
-  font-family: Helvetica, Arial, Sans-Serif;
-}
-
 body > div {
   max-width: 1200px;
   margin: 0 auto;
@@ -65,8 +63,6 @@ body > div {
 
 .page {
   min-height: 100vh;
-  max-width: 1600px;
-  margin: 0 auto;
 }
 
 h4 {
@@ -78,9 +74,6 @@ h4 {
   color: white;
 }
 
-.logo {
-}
-
 /*homepage*/
 .home-image-stack {
   display: flex;
@@ -88,8 +81,54 @@ h4 {
   align-items: center;
   text-align: center;
   justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.home-image-stack > *:first-child {
+  margin-top: auto;
 }
 
 .home-image-stack img {
   width: 300px;
+}
+
+nav {
+  margin-top: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+nav ul {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 10px;
+  padding: 0;
+}
+
+@media (max-width: 400px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+nav ul li {
+  box-sizing: border-box;
+}
+
+nav ul li a {
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+nav ul li a:hover {
+  background-color: #6FD8BF;
+  color: #169695;
 }
