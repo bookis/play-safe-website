@@ -55,6 +55,10 @@ body > div {
   color: white;
 }
 
+.content {
+  padding: 20px 0;
+}
+
 .column {
   display: flex;
   flex-direction: column;
@@ -132,3 +136,4 @@ nav ul li a:hover {
   background-color: #6FD8BF;
   color: #169695;
 }
+
